@@ -63,3 +63,7 @@ $ mvn clean verify -Dcucumber.filter.tags=@nombreTag
 ```
 
 The test results will be recorded in the **target/site/serenity/index.html** directory.
+
+### 2 - FAILURE REPORT
+You can not usually build automated testing for something that you have not done good manual testing before, so it is vital that our test engineers are able to transmit ideas, listen, and report defects/failures in a clear way.
+Write a short report on any findings that you may consider a defect or worth of improvement for [WordCounter](https://wordcounter.net/).
