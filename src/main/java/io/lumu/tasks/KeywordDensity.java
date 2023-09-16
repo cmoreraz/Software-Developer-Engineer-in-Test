@@ -18,7 +18,10 @@ public class KeywordDensity implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         for(int i = 1; i < 4; i++) {
-            String keywordDensity = Text.of(KEYWORD_DENSITY.of(String.valueOf(i))).answeredBy(actor);
+            String keywordDensity = Text.of(
+                    KEYWORD_DENSITY.of(String.valueOf(i))
+            ).answeredBy(actor);
+
             recordReportData(String.valueOf(i), keywordDensity);
         }
 
