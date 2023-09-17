@@ -67,3 +67,84 @@ The test results will be recorded in the **target/site/serenity/index.html** dir
 ### 2 - FAILURE REPORT
 You can not usually build automated testing for something that you have not done good manual testing before, so it is vital that our test engineers are able to transmit ideas, listen, and report defects/failures in a clear way.
 Write a short report on any findings that you may consider a defect or worth of improvement for [WordCounter](https://wordcounter.net/).
+
+### 4 - WORD FREQUENCY COUNTER
+Knowing how often a word appears in a sentence or block of text is helpful for
+several types of word analysis.
+Using your preferred language/framework, create your own algorithm that reads
+a text file and counts the frequency of words in the given text. Then it
+counts words and characters, and also constructs a histogram displaying the
+words and the frequency.
+Example Output.
+Given a file with the text below
+lumu lumu lumu lumu lumu illuminates illuminates attacks and adversaries
+
+#### 4.1 - WORD FREQUENCY COUNTER - SOLUTION
+
+```python
+import re
+from collections import Counter
+import matplotlib.pyplot as plt
+```
+
+```python
+class ReadFile:
+    
+    def read(self) -> str:
+        with open('LumuTechnologies.txt', 'r') as file:
+            return file.read()
+```
+
+```python
+data = ReadFile()
+data.read()
+```
+
+```python
+class CounterWordCharacter:
+    data = ReadFile()
+    top_n = 10
+
+    def token(self):
+        return re.findall(r'\b\w+\b', self.data.read().lower())
+
+    def word_frequency(self) -> Counter[Any]:
+        return Counter(self.token())
+
+    def words(self):
+        return len(self.token())
+
+    def characters(self):
+        return len(self.data.read())
+
+    def common_words(self):
+        return self.word_frequency().most_common(self.top_n)
+```
+
+```python
+class CreateHistogram:
+
+    word = CounterWordCharacter()
+
+    def histogram(self):
+        plt.figure(figsize=(10, 6))
+        plt.xlabel('Word')
+        plt.ylabel('Frequency ')
+        plt.title('Word Frequency Histogram')
+        plt.xticks(rotation=45)
+        plt.tight_layout()
+        plt.bar(*zip(*self.word.common_words()))
+        plt.show()
+```
+
+```python
+word = CounterWordCharacter()
+print(word.words())
+print(word.characters())
+print(word.common_words())
+print(word.token())
+print(word.word_frequency())
+print(word.common_words())
+histogram = CreateHistogram()
+histogram.histogram()
+```
