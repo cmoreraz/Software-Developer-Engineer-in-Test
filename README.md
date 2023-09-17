@@ -1,7 +1,7 @@
 # Software Developer Engineer in Test - Test Automation Engineer
 
 
-### 1 - AUTOMATED TEST SUITE
+### 1. AUTOMATED TEST SUITE
 Using your preferred language/framework, create a test suite that
 automatically validates that [WordCounter](https://wordcounter.net/) correctly displays:
 - number of words
@@ -27,7 +27,7 @@ For 1st and 4rd points:
 - Upload your project to a GitHub repo and share it with us. 
 - Provide detailed instructions on how to run your project (preferably also in the repo).
 
-#### 1.1 - AUTOMATED TEST SUITE - SOLUTION
+#### 1.1. AUTOMATED TEST SUITE - SOLUTION
 
 Lumu Technologies is a project that developed the technical test presented in the previous paragraph.
 
@@ -35,7 +35,7 @@ In order to use best practices, the screemplay pattern was used, creating a sing
 
 
 
-#### 1.2 - INSTALLATION
+#### 1.2. INSTALLATION
 
 The development should be focused on the use of **Linux** OS or **Unix** based systems, to make the installation of the dependencies effective and ensure the operation of the project in any **development**, **testing**, and **production** environment.
 
@@ -51,7 +51,7 @@ $ mvn --version
 2. As this is an automation backend project developed with serenity bdd framework [Serenity](https://serenity-bdd.github.io/docs/tutorials/first_test), it is not necessary to install any extra tool, however, you should review the documentation to understand how it works.
 
 
-## How to run the tests?
+### 1.3. How to run the tests?
 
 Following these steps, we can perform the execution of the test suite or a specific feature:
 ```sh
@@ -61,11 +61,11 @@ $ mvn clean verify -Dcucumber.filter.tags=@nombreTag
 
 The test results will be recorded in the **target/site/serenity/index.html** directory.
 
-### 2 - FAILURE REPORT
+### 2. FAILURE REPORT
 You can not usually build automated testing for something that you have not done good manual testing before, so it is vital that our test engineers are able to transmit ideas, listen, and report defects/failures in a clear way.
 Write a short report on any findings that you may consider a defect or worth of improvement for [WordCounter](https://wordcounter.net/).
 
-#### 2.1 - FAILURE REPORT - SOLUTION
+#### 2.1. FAILURE REPORT - SOLUTION
 - Within the application, there is a marked inconsistency in the choice of colors, resulting in an unpleasant user experience. For example, a light shade of blue is used in the navigation bar, while the action buttons have a darker shade of blue.
 Recommendation: To maintain a visual appearance, it is suggested to harmonize all interface elements with a consistent color palette.
 
@@ -85,7 +85,7 @@ Recommendation: It is suggested the implementation of these aforementioned tags,
 - Application pages have been identified as having long loading times.
 Recommendation: Establish response times for each of the services and the elements displayed on the page since there are studies that show that if an app does not respond in 3 seconds or less, it leaves and looks for another page that offers a service. similar
 
-### 3 - UX MATTERS
+### 3. UX MATTERS
 Usually our work as testers in a product/project starts from the design phase,
 in that time we already can make comments and suggestions that allows the
 Design team to make some improvements in order to have a clean final product
@@ -95,7 +95,7 @@ known web page/application (ex. Search forms, Business flows, Payment forms).
 You may build a report with 3 UX issues, give us a clear explanation about
 what’s wrong and how we can replicate it.
 
-#### 3.1 - UX MATTERS - SOLUTION
+#### 3.1. UX MATTERS - SOLUTION
 After making several queries on the Internet, it can be identified that WordCounter is a tool that is used to count words and characters in a text entered by the user, after this research we found the following points that we suggest to improve.
 
 
@@ -113,7 +113,7 @@ Suggestion: Along with the suggestion of the previous point, you can adapt the s
 Suggestion: Add additional tools that allow the identification of keywords, and detection of grammatical errors in different languages, and enable rest services to integrate with other tools with the phone keyboard, computer, or other code editing tool.
 
 
-### 4 - WORD FREQUENCY COUNTER
+### 4. WORD FREQUENCY COUNTER
 Knowing how often a word appears in a sentence or block of text is helpful for
 several types of word analysis.
 Using your preferred language/framework, create your own algorithm that reads
@@ -124,7 +124,7 @@ Example Output.
 Given a file with the text below
 lumu lumu lumu lumu lumu illuminates illuminates attacks and adversaries
 
-#### 4.1 - WORD FREQUENCY COUNTER - SOLUTION
+#### 4.1. WORD FREQUENCY COUNTER - SOLUTION
 
 To give solution to the previous point a book with **.ipynb** extension was created, if you want to run it inside your environment you must create a file with the above mentioned extension and run, using the jupyter notebook environment.
 The code is shown below, which is stored in the folder **Word Frequency Histogram** together with the **.txt** file used for the exercise.
