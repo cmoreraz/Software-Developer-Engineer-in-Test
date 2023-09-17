@@ -82,7 +82,7 @@ lumu lumu lumu lumu lumu illuminates illuminates attacks and adversaries
 #### 4.1 - WORD FREQUENCY COUNTER - SOLUTION
 
 To give solution to the previous point a book with **.ipynb** extension was created, if you want to run it inside your environment you must create a file with the above mentioned extension and run, using the jupyter notebook environment.
-The code is shown below:
+The code is shown below, which is stored in the folder **Word Frequency Histogram** together with the **.txt** file used for the exercise.
 
 ```python
 import re
