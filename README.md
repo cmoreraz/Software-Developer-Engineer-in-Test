@@ -4,12 +4,9 @@
 ### 1 - AUTOMATED TEST SUITE
 Using your preferred language/framework, create a test suite that
 automatically validates that [WordCounter](https://wordcounter.net/) correctly displays:
-
-● # of words
-
-● # of characters
-
-● The 3 most repeated words with the number of repetitions (Keyword
+- number of words
+- number of characters
+- The 3 most repeated words with the number of repetitions (Keyword
 Density section)
 
 You're free to create as many scenarios as you think are necessary to cover
@@ -18,17 +15,17 @@ many scenarios were executed, how many passed, and how many failed with it's
 error description.
 Requirements
 
-● You don't need to modify any settings in the website, always use the
+- You don't need to modify any settings in the website, always use the
 default settings.
+- Ask as many questions you have in order to clarify the scope of your
+tests. 
 
-● Ask as many questions you have in order to clarify the scope of your
-tests. Feel free to contact us or be sure to detail any assumption you
+Feel free to contact us or be sure to detail any assumption you
 made. (Limit your questions to a single mail please)
 For 1st and 4rd points:
 
-● Upload your project to a GitHub repo and share it with us. 
-
-● Provide detailed instructions on how to run your project (preferably also in the repo).
+- Upload your project to a GitHub repo and share it with us. 
+- Provide detailed instructions on how to run your project (preferably also in the repo).
 
 #### 1.1 - AUTOMATED TEST SUITE - SOLUTION
 
@@ -67,6 +64,54 @@ The test results will be recorded in the **target/site/serenity/index.html** dir
 ### 2 - FAILURE REPORT
 You can not usually build automated testing for something that you have not done good manual testing before, so it is vital that our test engineers are able to transmit ideas, listen, and report defects/failures in a clear way.
 Write a short report on any findings that you may consider a defect or worth of improvement for [WordCounter](https://wordcounter.net/).
+
+#### 2.1 - FAILURE REPORT - SOLUTION
+- Within the application, there is a marked inconsistency in the choice of colors, resulting in an unpleasant user experience. For example, a light shade of blue is used in the navigation bar, while the action buttons have a darker shade of blue.
+Recommendation: To maintain a visual appearance, it is suggested to harmonize all interface elements with a consistent color palette.
+
+
+- When accessing the application from mobile devices or smaller screens, it is detected that some elements experience overflow or overlapping, which has a negative impact on usability and readability.
+Recommendation: In order to ensure an optimal experience on all screens, it is necessary to conduct extensive testing on mobile devices and effectively address responsive design issues.
+
+
+- The application does not meet appropriate accessibility standards as it does not provide adequate labels for essential elements such as images and forms, which excludes users with visual impairments.
+Recommendation: To ensure universal accessibility, a design system is encouraged.
+
+
+- The implementation of "alt" tags for images and the inclusion of "aria" attributes in interactive elements are not evident.
+Recommendation: It is suggested the implementation of these aforementioned tags, on the other hand, along with the previous task, attributes can be implemented to identify elements within the page and to identify the elements that are not included in the design.
+
+
+- Application pages have been identified as having long loading times.
+Recommendation: Establish response times for each of the services and the elements displayed on the page since there are studies that show that if an app does not respond in 3 seconds or less, it leaves and looks for another page that offers a service. similar
+
+### 3 - UX MATTERS
+Usually our work as testers in a product/project starts from the design phase,
+in that time we already can make comments and suggestions that allows the
+Design team to make some improvements in order to have a clean final product
+that matches with the client's expectations.
+In this test you may search for issues in user interfaces of a public and well
+known web page/application (ex. Search forms, Business flows, Payment forms).
+You may build a report with 3 UX issues, give us a clear explanation about
+what’s wrong and how we can replicate it.
+
+#### 3.1 - UX MATTERS - SOLUTION
+After making several queries on the Internet, it can be identified that WordCounter is a tool that is used to count words and characters in a text entered by the user, after this research we found the following points that we suggest to improve.
+
+
+- The user interface is confusing, and new users may find it difficult to understand how to use the existing tools and functionalities.
+We can replicate this opportunity for improvement when entering the tool for the first time since there is no user guide or manual that we can follow, which can generate a fairly high learning curve and part of the users could look for other tools that do the same and would generate a loss of users.
+Suggestion: Adopt a design system such as Google, Jira, or any other to improve the experience and satisfaction of our users.
+
+
+- When entering the web page, select the browser development tools with the keys **ctrl + ship + I** and go to the mobile part to validate the responsiveness of the site we can observe that the image is distorted and the elements do not look attractive.
+This can be uncomfortable for most of the users since the new technological trends show that each of us usually enters any site using our mobile devices.
+Suggestion: Along with the suggestion of the previous point, you can adapt the site to certain screen sizes (the most used for mobile, Tablet, and computer) this will allow an increase in user traffic and thus we can retain them.
+
+
+- When entering text into the tool, there are limitations in the text analysis functionalities.
+Suggestion: Add additional tools that allow the identification of keywords, and detection of grammatical errors in different languages, and enable rest services to integrate with other tools with the phone keyboard, computer, or other code editing tool.
+
 
 ### 4 - WORD FREQUENCY COUNTER
 Knowing how often a word appears in a sentence or block of text is helpful for
