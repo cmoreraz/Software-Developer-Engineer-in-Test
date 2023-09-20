@@ -50,6 +50,13 @@ $ mvn --version
 
 2. As this is an automation backend project developed with serenity bdd framework [Serenity](https://serenity-bdd.github.io/docs/tutorials/first_test), it is not necessary to install any extra tool, however, you should review the documentation to understand how it works.
 
+3. ¿How to format the code?
+   In the development of any project it is quite important to format the code and have a suitable linter to ensure the coding style of the programming language, in this case, Java you can execute the following command.
+```sh
+mvn com.spotify.fmt:fmt-maven-plugin:format
+```
+
+This will ensure that every time you save a change to a file, it is automatically formatted and as you write the code, you will have alerts that will indicate if you are meeting the specifications of the installed linter.
 
 ### 1.3. How to run the tests?
 
@@ -66,24 +73,25 @@ You can not usually build automated testing for something that you have not done
 Write a short report on any findings that you may consider a defect or worth of improvement for [WordCounter](https://wordcounter.net/).
 
 #### 2.1. FAILURE REPORT - SOLUTION
-- Within the application, there is a marked inconsistency in the choice of colors, resulting in an unpleasant user experience. For example, a light shade of blue is used in the navigation bar, while the action buttons have a darker shade of blue.
-Recommendation: To maintain a visual appearance, it is suggested to harmonize all interface elements with a consistent color palette.
+Al ingresar al sitio web [WordCounter](https://wordcounter.net/) y seleccionar la opcion **More** se puede observar que las cards que se muestran no tienen el mismo tamaño, no se encuentran alineadas y tienen un espaciado demasiado grande entre la primera y segunda seccion, como se puede observar en la siguiente imagen.
+![Word Frequency Histogram](./images/1.png)
 
+Dado lo anterior, se valido en dispositivos mobile y se evidencia que la resolucion mejora pero el espacioado entre las cards sigue siendo demasiado grande, como se puede observar en la siguiente imagen.
+![Word Frequency Histogram](./images/2.png)
 
-- When accessing the application from mobile devices or smaller screens, it is detected that some elements experience overflow or overlapping, which has a negative impact on usability and readability.
-Recommendation: In order to ensure an optimal experience on all screens, it is necessary to conduct extensive testing on mobile devices and effectively address responsive design issues.
+Teniendo en cuenta lo anterior, y al navegar por distintas sesiones se puede evidenciar que el sitio no es responsive.
 
+Tambien, se puede visualizar que al ingresar al sitio desde dispositivos móviles o pantallas más pequeñas, se detecta que algunos elementos experimentan desbordamientos o solapamientos, lo que repercute negativamente en la usabilidad y legibilidad, como se puede observar en la siguiente imagen.
+![Word Frequency Histogram](./images/3.png)
 
-- The application does not meet appropriate accessibility standards as it does not provide adequate labels for essential elements such as images and forms, which excludes users with visual impairments.
-Recommendation: To ensure universal accessibility, a design system is encouraged.
+Al salir e ingresar nuevamente a la herramienta esta manteniene el texto ingresado inicialmente en el campo de texto aun despues de reiniciar el equipo, posterior a este proceso se valido si la aplicacion estaba guardando las **Cookies**, lo cual esta realizando pero no solicita autorizacion con otros sitios web, lo cual puede generar una mala experiencia de usuario.
 
+Continuando con la validacion de la herramienta, la seleccionar la opcion de **Blog** y pasar el mouse sobre las imagenes no hay un mensaje que haga alucion a la imagen, al ingresar a las herramientas de desarrollo del navegador se puede observar que no cuentan con la etiqueta **alt** y en caso de que falle la carga de la imagen no se muestra un texto alternativo o para personas con discapacidad visual, como se puede observar en la siguiente imagen.
+![Word Frequency Histogram](./images/5.png)
 
-- The implementation of "alt" tags for images and the inclusion of "aria" attributes in interactive elements are not evident.
-Recommendation: It is suggested the implementation of these aforementioned tags, on the other hand, along with the previous task, attributes can be implemented to identify elements within the page and to identify the elements that are not included in the design.
+Por ultimo, la curva de aprendizaje de la herramienta es muy alta, ya que no cuenta con un tutorial o guia de uso.
 
-
-- Application pages have been identified as having long loading times.
-Recommendation: Establish response times for each of the services and the elements displayed on the page since there are studies that show that if an app does not respond in 3 seconds or less, it leaves and looks for another page that offers a service. similar
+Por ende, se suguiere implementar un sistema de diseño, que sea responsive y que cuente con un tutorial o guia de uso para que los usuarios puedan sacar el mayor provecho de la herramienta.
 
 ### 3. UX MATTERS
 Usually our work as testers in a product/project starts from the design phase,
@@ -96,21 +104,34 @@ You may build a report with 3 UX issues, give us a clear explanation about
 what’s wrong and how we can replicate it.
 
 #### 3.1. UX MATTERS - SOLUTION
-After making several queries on the Internet, it can be identified that WordCounter is a tool that is used to count words and characters in a text entered by the user, after this research we found the following points that we suggest to improve.
+Este documento tiene como objetivo documentar los incidentes encontrados dentro de la página web [Propiedades.com](https://propiedades.com/) y [Habi.co](https://habi.co), con el fin de mejorar la experiencia de usuario y la satisfacción de los mismos.
+
+Al ingresar a la página web de [Propiedades.com](https://propiedades.com/) inicialmente se evidencia que al ingresar al sitio por primera, se muestra una panatlla de validacion de seguridad antes de mostrar el home de la misma, esto se puede visualizar en dispositivos mobiles, tablets y equipos de computo, como se puede observar en la siguiente imagen.
+![Word Frequency Histogram](./images/seguridad.jpeg)
+En ocasiones se debe diligenciar el captcha para poder ingresar a la página, lo cual puede generar una mala experiencia de usuario, ya que se puede generar una pérdida de tiempo y de usuarios.
+
+Sugerencia: Se sugiere que se implemente un sistema de seguridad que no sea tan invasivo para el usuario.
 
 
-- The user interface is confusing, and new users may find it difficult to understand how to use the existing tools and functionalities.
-We can replicate this opportunity for improvement when entering the tool for the first time since there is no user guide or manual that we can follow, which can generate a fairly high learning curve and part of the users could look for other tools that do the same and would generate a loss of users.
-Suggestion: Adopt a design system such as Google, Jira, or any other to improve the experience and satisfaction of our users.
+Posteriormente, se muestra la pantalla de home de [Propiedades.com](https://propiedades.com) desde un dispostivo mobile (para este caso un iphone 12)  se visualiza que la página no es responsive puesto que la imagen del equipo de computo donde estan las graficas esta cortada, lo cual genera una mala experiencia de usuario, como se puede observar en la siguiente imagen.
+![Word Frequency Histogram](./images/responsive_1.jpeg)
 
+Dando continuidad al punto anterior, se cambio la pantalla a modo horizontal y aunque se puede visualizar la imagen un poco mas clara sigue sin mostrarse completa, como se puede observar en la siguiente imagen.
+![Word Frequency Histogram](./images/responsive_2.jpeg)
 
-- When entering the web page, select the browser development tools with the keys **ctrl + ship + I** and go to the mobile part to validate the responsiveness of the site we can observe that the image is distorted and the elements do not look attractive.
-This can be uncomfortable for most of the users since the new technological trends show that each of us usually enters any site using our mobile devices.
-Suggestion: Along with the suggestion of the previous point, you can adapt the site to certain screen sizes (the most used for mobile, Tablet, and computer) this will allow an increase in user traffic and thus we can retain them.
+Por otro lado, al dar scroll hasta la seccion **Mas departamentos en Venta**, mover para ver mas zonas, a partir del segundo scroll de evidencia que el texto de empieza a sobre poner, lo cual dificulta la visibilidad de la informacion, como se puede observar en la siguiente imagen.
+![Word Frequency Histogram](./images/responsive_3.jpeg)
 
+Por ultimo, al cambiar de secciones desde un equipo de escritorio se visualiza que se estan realizando cambios en el sistema de diseño de la pagina, por ejemplo en la seccion de bienvenida se muestra un diseño diferente al de la seccion de **Publicar gratis**, como se puede observar en la siguiente imagen.
+![Word Frequency Histogram](./images/Captura%20de%20pantalla%202023-09-20%20a%20la(s)%2012.27.01%20p.m..png)
 
-- When entering text into the tool, there are limitations in the text analysis functionalities.
-Suggestion: Add additional tools that allow the identification of keywords, and detection of grammatical errors in different languages, and enable rest services to integrate with other tools with the phone keyboard, computer, or other code editing tool.
+Pero al visualizar la siguiente imagen se puede observar que los colores empiezan a diferir un poco.
+![Word Frequency Histogram](./images/Captura%20de%20pantalla%202023-09-20%20a%20la(s)%2012.27.38%20p.m..png)
+
+Sugerencia: Se sugiere que se implemente un diseño igual para todo el sitio y que sea responsive para que se pueda visualizar correctamente en dispositivos móviles, puesto que este sitio cuenta con un trafico de aproximadamente 2 millones de usuarios pero no se esta monetizando si no el uno 1%.
+
+Por otro lado, al ingresar a la página de [Habi.co](https://habi.co) se evidencia que la página no es responsive, lo cual genera una mala experiencia de usuario, ya que no se puede visualizar correctamente en dispositivos móviles, como se puede observar en la siguiente imagen.
+![Word Frequency Histogram](./images/habi.jpeg)
 
 
 ### 4. WORD FREQUENCY COUNTER
